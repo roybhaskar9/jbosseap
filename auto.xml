@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+<productName>EAP</productName>
+<productVersion>6.4.0</productVersion>
+<com.izforge.izpack.panels.HTMLLicencePanel id="HTMLLicencePanel"/>
+<com.izforge.izpack.panels.TargetPanel id="DirectoryPanel">
+<installpath>C:\Users\jbossadmin\EAP-6.4.0</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.TreePacksPanel id="TreePacksPanel">
+<pack index="0" name="Red Hat JBoss Enterprise Application Platform" selected="true"/>
+<pack index="1" name="AppClient" selected="true"/>
+<pack index="2" name="Bin" selected="true"/>
+<pack index="3" name="Bundles" selected="true"/>
+<pack index="4" name="XMLs and XSDs" selected="true"/>
+<pack index="5" name="Domain" selected="true"/>
+<pack index="6" name="Domain Batch Scripts" selected="true"/>
+<pack index="7" name="Modules" selected="true"/>
+<pack index="8" name="Standalone" selected="true"/>
+<pack index="9" name="Standalone Batch Scripts" selected="true"/>
+<pack index="10" name="Welcome Content" selected="true"/>
+<pack index="11" name="Quickstarts" selected="true"/>
+<pack index="12" name="Red Hat JBoss Enterprise Application Platform Natives" selected="true"/>
+<pack index="13" name="Native Windows-x86_64" selected="true"/>
+<pack index="14" name="Native Utils Windows-x86_64" selected="true"/>
+<pack index="15" name="Native Webserver Windows-x86_64" selected="true"/>
+</com.izforge.izpack.panels.TreePacksPanel>
+<com.izforge.izpack.panels.UserInputPanel id="CreateUserPanel">
+<userInput>
+<entry key="adminUser" value="admin"/>
+<entry autoPrompt="true" key="adminPassword"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="QuickStartsPanel">
+<userInput>
+<entry key="installQuickStarts" value="true"/>
+<entry key="install.quickstarts.path" value="${INSTALL_PATH}"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.redhat.installer.installation.maven.panel.MavenRepoCheckPanel id="MavenRepoCheckPanel">
+<mavenrepopath>http://maven.repository.redhat.com/techpreview/all</mavenrepopath>
+<mavensettingsfullpath>${USER_HOME}\.m2\settings.xml</mavensettingsfullpath>
+<mavenSettings>on</mavenSettings>
+</com.redhat.installer.installation.maven.panel.MavenRepoCheckPanel>
+<com.izforge.izpack.panels.UserInputPanel id="SocketBindingPanel">
+<userInput>
+<entry key="portDecision" value="false"/>
+<entry key="pureIPv6" value="false"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="SocketStandalonePanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="SocketHaStandalonePanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="SocketFullStandalonePanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="SocketFullHaStandalonePanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="HostDomainPanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="SocketDomainPanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="SocketHaDomainPanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="SocketFullDomainPanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="SocketFullHaDomainPanel"/>
+<com.izforge.izpack.panels.UserInputPanel id="ServerLaunchPanel">
+<userInput>
+<entry key="serverStartup" value="domain"/>
+<entry key="browserStartup" value="true"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="LoggingOptionsPanel">
+<userInput>
+<entry key="configureLog" value="true"/>
+<entry key="root-log-level" value="INFO"/>
+<entry key="console-log-level" value="INFO"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="postinstall">
+<userInput>
+<entry key="postinstallServer" value="false"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="vaultsecurity"/>
+<com.izforge.izpack.panels.UserInputPanel id="sslsecurity"/>
+<com.izforge.izpack.panels.UserInputPanel id="ldapsecurity"/>
+<com.izforge.izpack.panels.UserInputPanel id="ldapsecurity2"/>
+<com.izforge.izpack.panels.UserInputPanel id="infinispan"/>
+<com.redhat.installer.asconfiguration.securitydomain.panel.SecurityDomainPanel id="Security Domain Panel"/>
+<com.izforge.izpack.panels.UserInputPanel id="jsssecuritydomain"/>
+<com.redhat.installer.asconfiguration.jdbc.panel.JBossJDBCDriverSetupPanel id="JDBC Setup Panel"/>
+<com.redhat.installer.asconfiguration.datasource.panel.JBossDatasourceConfigPanel id="Datasource Configuration Panel"/>
+<com.izforge.izpack.panels.SummaryPanel id="SummaryPanel"/>
+<com.izforge.izpack.panels.InstallPanel id="InstallPanel"/>
+<com.izforge.izpack.panels.ProcessPanel id="ProcessPanel"/>
+<com.izforge.izpack.panels.ShortcutPanel id="ShortcutPanel">
+<programGroup name="JBoss Platform"/>
+<shortcut KdeSubstUID="false" categories="" commandLine="-jar &quot;${INSTALL_PATH}\Uninstaller\uninstaller.jar&quot;" createForAll="true" description="Uninstall the JBoss Platform" encoding="UTF-8" group="true" icon="${INSTALL_PATH}\icons\48-uninstall.ico" iconIndex="0" initialState="1" mimetype="" name="Uninstall Platform" target="C:\Program Files\Java\jre1.8.0_172\bin\java" terminal="false" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="&quot;${INSTALL_PATH}\bin\standalone.bat&quot;" createForAll="true" description="Start the standalone server" encoding="UTF-8" group="true" icon="${INSTALL_PATH}\icons\48-start.ico" iconIndex="0" initialState="1" mimetype="" name="Start Server (standalone)" target="${INSTALL_PATH}\bin\run.exe" terminal="true" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="&quot;${INSTALL_PATH}\bin\domain.bat&quot;" createForAll="true" description="Start the domain server" encoding="UTF-8" group="true" icon="${INSTALL_PATH}\icons\48-start.ico" iconIndex="0" initialState="1" mimetype="" name="Start Server (domain)" target="${INSTALL_PATH}\bin\run.exe" terminal="true" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="/C start http:\\localhost:9990\console" createForAll="true" description="Launch the JBoss Administration Console" encoding="UTF-8" group="true" icon="${INSTALL_PATH}\icons\48-jmx.ico" iconIndex="0" initialState="1" mimetype="" name="JBoss Administration Console (domain)" target="C:\Windows\System32\cmd.exe" terminal="false" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="/C start http:\\localhost:9990\console" createForAll="true" description="Launch the JBoss Administration Console" encoding="UTF-8" group="true" icon="${INSTALL_PATH}\icons\48-jmx.ico" iconIndex="0" initialState="1" mimetype="" name="JBoss Administration Console (standalone)" target="C:\Windows\System32\cmd.exe" terminal="false" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="--connect command=:shutdown --controller=localhost:9999" createForAll="true" description="Shutdown the application server" encoding="UTF-8" group="true" icon="${INSTALL_PATH}\icons\48-stop.ico" iconIndex="0" initialState="1" mimetype="" name="Shutdown Server (standalone)" target="${INSTALL_PATH}\bin\jboss-cli.bat" terminal="true" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="--connect command=/host=master:shutdown --controller=localhost:9999" createForAll="true" description="Shutdown the application server" encoding="UTF-8" group="true" icon="${INSTALL_PATH}\icons\48-stop.ico" iconIndex="0" initialState="1" mimetype="" name="Shutdown Server (domain)" target="${INSTALL_PATH}\bin\jboss-cli.bat" terminal="true" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+</com.izforge.izpack.panels.ShortcutPanel>
+<com.izforge.izpack.panels.FinishPanel id="FinishPanel"/>
+</AutomatedInstallation>
